@@ -24,7 +24,9 @@
           data-level-exp="<%= opportunity.level_exp %>"
           data-like-count="<%= opportunity.like_count %>"
         >
-          <%= link_to opportunity.name, opportunity_path(opportunity) %>
+          <p><strong><%= opportunity.name %></strong></p>
+          <p><%= opportunity.description.truncate(100) %></p>
+          <%= link_to "Read more", opportunity_path(opportunity) %>
         </li>
       <% end %>
     </ul>

@@ -4,14 +4,14 @@
 </div>
 
 <dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:image_url) %>:</strong></dt>
+  <dd><img src="<%= @opportunity.image_url %>"></dd>
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @opportunity.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:site_url) %>:</strong></dt>
   <dd><%= @opportunity.site_url %></dd>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @opportunity.description %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:skills_id) %>:</strong></dt>
-  <dd><%= @opportunity.skills_id %></dd>
   <dt><strong><%= model_class.human_attribute_name(:level_exp) %>:</strong></dt>
   <dd><%= @opportunity.level_exp %></dd>
   <dt><strong><%= model_class.human_attribute_name(:level_age_min) %>:</strong></dt>
@@ -20,22 +20,14 @@
   <dd><%= @opportunity.level_age_max %></dd>
   <dt><strong><%= model_class.human_attribute_name(:cost) %>:</strong></dt>
   <dd><%= @opportunity.cost %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
-  <dd><%= @opportunity.address %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:lat) %>:</strong></dt>
-  <dd><%= @opportunity.lat %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:lon) %>:</strong></dt>
-  <dd><%= @opportunity.lon %></dd>
   <dt><strong><%= model_class.human_attribute_name(:into_work) %>:</strong></dt>
   <dd><%= @opportunity.into_work %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:girls_only) %>:</strong></dt>
-  <dd><%= @opportunity.girls_only %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:audience) %>:</strong></dt>
+  <dd><%= @opportunity.audience %></dd>
   <dt><strong><%= model_class.human_attribute_name(:cost_min) %>:</strong></dt>
   <dd><%= @opportunity.cost_min %></dd>
   <dt><strong><%= model_class.human_attribute_name(:skills) %>:</strong></dt>
   <dd><%= @opportunity.skills %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:audience) %>:</strong></dt>
-  <dd><%= @opportunity.audience %></dd>
   <dt><strong><%= model_class.human_attribute_name(:employer_opp) %>:</strong></dt>
   <dd><%= @opportunity.employer_opp %></dd>
   <dt><strong><%= model_class.human_attribute_name(:lo_type) %>:</strong></dt>

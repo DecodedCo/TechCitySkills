@@ -74,20 +74,27 @@
 
       .opportunity {
         display:inline-block;
+        margin:5px;
       }
 
-      .opportunity a {
+      .opportunity {
         display:block;
         height:200px;
         border-radius:15px;
-        background:#f90;
+        background:rgba(9,255,0,0.5);
         width:200px;
         padding:10px;
+      }
+
+      .opportunity:hover {
+        background:rgba(9,255,0,0.8);
+      }
+
+      .opportunity a {
         color:#fff;
       }
 
-      .opportunity a:hover {
-        background:#f60;
+      .opportunity:hover a {
         color:#ff0;
       }
 
