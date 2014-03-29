@@ -1,1 +1,16 @@
-sdfsdf
+<h1>Ways to get involved</h1>
+<table class="table table-bordered table-striped">
+	<thead>
+		<th>Name</th>
+		<th>Opportunity</th>
+	</thead>
+	<tbody>
+
+<% Opportunity.all.each do |opportunity| %>
+	<tr>
+		<td><%= opportunity.name %></td>
+		<td><%= opportunity.employer_opp %></td>
+	</tr>
+<% end %>
+</tbody>
+</table>
