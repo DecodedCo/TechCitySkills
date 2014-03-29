@@ -1,4 +1,6 @@
 TechCitySkills::Application.routes.draw do
+  resources :opportunity_types
+
   resources :skill_categories
 
   resources :skills
