@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+types = OpportunityType.create([{name: 'Event'},
+						{name: 'Course'},
+						{name: 'Online'},
+						{name: 'Workshop'},
+						{name: 'Open Day'},
+						{name: 'Talk'},
+						{name: 'Networking'},
+						{name: 'Community'},
+						{name: 'Awards'}])
