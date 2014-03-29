@@ -7,6 +7,8 @@ TechCitySkills::Application.routes.draw do
 
   resources :opportunities
 
+  resources :employers
+
   get "home/index"
 
   # The priority is based upon order of creation:
