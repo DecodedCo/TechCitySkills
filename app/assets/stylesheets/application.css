@@ -18,6 +18,11 @@
     padding:20px;
   }
 
+  div.logo { display: block; margin: 0px auto; text-align: center;  }
+  h1 { font-family: Gafata !important; text-align: center; display: inline; font-size: 1.7em  }
+
+  .brand { font-family: Gafata !important;}
+
   .home-videos {
     margin-bottom:20px;
   }
