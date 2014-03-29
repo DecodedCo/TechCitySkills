@@ -2,14 +2,37 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
-<ul>
-  <% @opportunities.each do |opportunity| %>
-    <li data-<%= model_class.human_attribute_name(:level_exp) %>="<%= opportunity.level_exp %>">
-      <%= link_to opportunity.name, opportunity_path(opportunity) %>
-    </li>
-  <% end %>
-</ul>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_opportunity_path,
-            :class => 'btn btn-primary' %>
+<div class="row opportunities">
+  <div class="span4 opportunities__filter">
+    <h3>Filters</h3>
+    <p><a href="#" data-filter="*">show all</a></p>
+    <p>Level</p>
+    <ul id="filters">
+      <li><a href="#" data-filter="[data-level-exp=novice]">novice</a></li>
+      <li><a href="#" data-filter="[data-level-exp=intermediate]">intermediate</a></li>
+      <li><a href="#" data-filter="[data-level-exp=expert]">expert</a></li>
+    </ul>
+  </div>
+  <div class="span8 opportunities__list">
+    <ul>
+      <% @opportunities.each do |opportunity| %>
+        <li class="opportunity"
+          data-skills="<%= opportunity.skills %>"
+          data-level-age-min="<%= opportunity.level_age_min %>"
+          data-level-age-max="<%= opportunity.level_age_max %>"
+          data-level-exp="<%= opportunity.level_exp %>"
+          data-like-count="<%= opportunity.like_count %>"
+        >
+          <%= link_to opportunity.name, opportunity_path(opportunity) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<%=
+# link_to t('.new', :default => t("helpers.links.new")),
+#             new_opportunity_path,
+#             :class => 'btn btn-primary'
+%>

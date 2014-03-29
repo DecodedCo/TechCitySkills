@@ -14,3 +14,21 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+$(document).ready(function(){
+
+  var $container = $('.opportunities__list ul');
+
+  // filtering
+  $container.isotope({
+    itemSelector : '.opportunity'
+  });
+
+
+  $('a[data-filter]').click(function(){
+    var selector = $(this).attr('data-filter');
+    $container.isotope({ filter: selector });
+    return false;
+});
+
+});
