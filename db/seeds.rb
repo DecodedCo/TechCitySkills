@@ -14,4 +14,13 @@ types = OpportunityType.create([{name: 'Event'},
 						{name: 'Talk'},
 						{name: 'Networking'},
 						{name: 'Community'},
-						{name: 'Awards'}])
+						{name: 'Awards'},
+						{name: 'Apprenticeship'}])
+
+require 'csv'
+
+csv_text = File.open('opportunities.csv', "r:ISO-8859-1")
+csv = CSV.parse(csv_text, :headers => true)
+csv.each do |row|
+	Opportunity.create(row.to_hash)
+end
