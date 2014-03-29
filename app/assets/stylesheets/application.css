@@ -23,8 +23,12 @@ body {
   }
 
   div.logo { display: block; margin: 0px auto; text-align: center;  }
-  div.logo img { margin: 0px; display: inline; width: 4em; margin-bottom: 0.4em; }
-  h1 { font-family: Gafata !important; text-align: center; display: inline; font-size: 1.7em  }
+  div.logo img { margin: 0px; display: inline; width: 5em; margin-bottom: 1em; }
+  h1 { font-family: Gafata !important; text-align: center; display: inline; font-size: 2.5em  }
+
+  h2 {
+    font-size: 2em;
+  }
 
   .brand { font-family: Gafata !important;}
 
