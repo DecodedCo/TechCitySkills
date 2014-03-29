@@ -14,4 +14,19 @@ types = OpportunityType.create([{name: 'Event'},
 						{name: 'Talk'},
 						{name: 'Networking'},
 						{name: 'Community'},
-						{name: 'Awards'}])
+						{name: 'Awards'},
+						{name: 'Apprenticeship'}])
+
+require 'csv'
+
+csv_text = File.read('tmp/opportunities.csv')
+csv = CSV.parse(csv_text)
+csv.each do |row|
+	Opportunity.create({
+		name: row[0],
+
+		})
+
+opportunities = Opportunity.create([
+	{}])
+
