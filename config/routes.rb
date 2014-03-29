@@ -1,4 +1,12 @@
 TechCitySkills::Application.routes.draw do
+  resources :skill_categories
+
+  resources :skills
+
+  resources :opportunities
+
+  get "home/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

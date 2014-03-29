@@ -1,0 +1,86 @@
+<%= form_for @opportunity, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :site_url, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :site_url, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :description, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :description, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :skills_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :skills_id, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :level_exp, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :level_exp, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :level_age_min, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :level_age_min, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :level_age_max, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :level_age_max, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :cost, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :cost, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :address, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :address, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :lat, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :lat, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :lon, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :lon, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :into_work, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :into_work, :class => 'check_box' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :girls_only, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :girls_only, :class => 'check_box' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                opportunities_path, :class => 'btn' %>
+  </div>
+<% end %>
