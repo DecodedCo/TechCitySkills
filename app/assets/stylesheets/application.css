@@ -12,6 +12,10 @@
  *= require_tree .
  */
 
+body {
+  font-family: Gafata;
+}
+
 /* home */
   .home-title {
     text-align:center;
@@ -19,6 +23,7 @@
   }
 
   div.logo { display: block; margin: 0px auto; text-align: center;  }
+  div.logo img { margin: 0px; display: inline; width: 4em; margin-bottom: 0.4em; }
   h1 { font-family: Gafata !important; text-align: center; display: inline; font-size: 1.7em  }
 
   .brand { font-family: Gafata !important;}
