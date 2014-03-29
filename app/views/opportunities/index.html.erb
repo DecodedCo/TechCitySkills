@@ -19,6 +19,7 @@
       <th><%= model_class.human_attribute_name(:lon) %></th>
       <th><%= model_class.human_attribute_name(:into_work) %></th>
       <th><%= model_class.human_attribute_name(:girls_only) %></th>
+      <th><%= model_class.human_attribute_name(:cost_min) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -40,6 +41,7 @@
         <td><%= opportunity.lon %></td>
         <td><%= opportunity.into_work %></td>
         <td><%= opportunity.girls_only %></td>
+        <td><%= opportunity.cost_min %></td>
         <td><%=l opportunity.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

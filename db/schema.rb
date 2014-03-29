@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140329151537) do
+ActiveRecord::Schema.define(:version => 20140329154350) do
 
   create_table "opportunities", :force => true do |t|
     t.string   "name"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20140329151537) do
     t.boolean  "girls_only"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.integer  "cost_min"
   end
 
   add_index "opportunities", ["skills_id"], :name => "index_opportunities_on_skills_id"
