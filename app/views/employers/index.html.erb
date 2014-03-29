@@ -15,10 +15,12 @@ What can you do to help develop young talent who one day soon will work in your 
 	<tbody>
 
 <% Opportunity.all.each do |opportunity| %>
+	<% if opportunity.employer_opp && opportunity.employer_opp != "n" %>
 	<tr>
 		<td><%= opportunity.name %></td>
-		<td><%= opportunity.employer_opp %></td>
+		<td><a href="<%= opportunity.employer_opp %>"><%= opportunity.employer_opp %></td>
 	</tr>
+	<% end %>
 <% end %>
 </tbody>
 </table>
