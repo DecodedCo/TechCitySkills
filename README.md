@@ -9,3 +9,7 @@ A prototype for the connecting young people with skills and companies app
 Please pour thoughts into the Google Doc:
 
 https://docs.google.com/document/d/12ubsDyCGUB6LnT0BNOP0otFAp-HwVNjJKS0GziJQEeM/edit?usp=sharing
+
+And drawings:
+
+https://docs.google.com/drawings/d/169BhYE5wgGNrKqN2MwZyZhj7Kn_JZH_wrlIkWNQOhoM/edit?usp=sharing
