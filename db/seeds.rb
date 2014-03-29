@@ -19,14 +19,8 @@ types = OpportunityType.create([{name: 'Event'},
 
 require 'csv'
 
-csv_text = File.read('tmp/opportunities.csv')
-csv = CSV.parse(csv_text)
+csv_text = File.open('opportunities.csv', "r:ISO-8859-1")
+csv = CSV.parse(csv_text, :headers => true)
 csv.each do |row|
-	Opportunity.create({
-		name: row[0],
-
-		})
-
-opportunities = Opportunity.create([
-	{}])
-
+	Opportunity.create(row.to_hash)
+end
