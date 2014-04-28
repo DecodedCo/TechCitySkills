@@ -14,15 +14,25 @@
     <p><a href="#" data-filter="*">show all</a></p>
     <p>Level</p>
     <ul id="filters">
-      <li><a href="#" data-filter="[data-level-exp=novice]">novice</a></li>
-      <li><a href="#" data-filter="[data-level-exp=intermediate]">intermediate</a></li>
-      <li><a href="#" data-filter="[data-level-exp=expert]">expert</a></li>
+      <li><a href="#" data-filter=".beginner">beginner</a></li>
+      <li><a href="#" data-filter=".novice">novice</a></li>
+      <li><a href="#" data-filter=".intermediate">intermediate</a></li>
+      <li><a href="#" data-filter=".expert">expert</a></li>
+    </ul>
+    <p>Skills</p>
+    <ul id="filters">
+      <% @skills.each do |skill| %>
+        <li><a href="#" data-filter=".<%= skill %>"><%= skill.tr("_", " ") %></a></li>
+      <% end %>
     </ul>
   </div>
   <div class="span8 opportunities__list">
     <ul>
       <% @opportunities.each do |opportunity| %>
-        <li class="opportunity"
+        <% puts opportunity.level_exp %>
+        <% class_string = opportunity.level_exp.downcase.tr(',', '') + " " %>
+        <% class_string += opportunity.skills.downcase.split(", ").map{|s| s.tr(' ','_')}.join(" ") %>
+        <li class="opportunity <%= class_string %>"
           data-skills="<%= opportunity.skills %>"
           data-level-age-min="<%= opportunity.level_age_min %>"
           data-level-age-max="<%= opportunity.level_age_max %>"

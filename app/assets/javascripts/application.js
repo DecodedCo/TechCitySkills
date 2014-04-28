@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require twitter/bootstrap
+//= require isotope
 //= require_tree .
 
 $(document).ready(function(){

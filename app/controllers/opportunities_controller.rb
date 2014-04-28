@@ -3,6 +3,10 @@ class OpportunitiesController < ApplicationController
   # GET /opportunities.json
   def index
     @opportunities = Opportunity.all
+    @skills = @opportunities.map{|o| o.skills}.join(", ").downcase.split(", ").map{|s| s.tr(" ", "_")}.select{|s| s != ""}
+    skillCount = Hash.new(0)
+    @skills.each{|s| skillCount[s] += 1 }
+    @skills = @skills.sort{|s2, s1| skillCount[s1] <=> skillCount[s2]}.uniq.take(10)
 
     respond_to do |format|
       format.html # index.html.erb
