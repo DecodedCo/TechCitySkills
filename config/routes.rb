@@ -1,4 +1,6 @@
 TechCitySkills::Application.routes.draw do
+  devise_for :users
+
   resources :opportunity_types
 
   resources :skill_categories

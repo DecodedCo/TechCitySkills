@@ -50,6 +50,12 @@
     </div>
 
     <div class="container">
+      <% if notice %>
+        <p class="notice"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert"><%= alert %></p>
+      <% end %>
       <div class="row">
 
         <div class="span12">
@@ -58,7 +64,7 @@
       </div><!--/row-->
 
       <footer>
-        <p>&copy; Company 2014</p>
+        <p>&copy; Centre for London 2014 <%= link_to "Admin login", "/users/sign_in" %></p>
       </footer>
 
     </div> <!-- /container -->
