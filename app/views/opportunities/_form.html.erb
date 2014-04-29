@@ -8,7 +8,13 @@
   <div class="control-group">
     <%= f.label :site_url, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :site_url, :class => 'text_field' %>
+      <%= f.url_field :site_url, :class => 'text_field' %>
+    </div>
+  </div>
+    <div class="control-group">
+    <%= f.label :image_url, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.url_field :image_url, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
@@ -18,25 +24,19 @@
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :skills_id, :class => 'control-label' %>
+    <%= f.label :level_exp, "Level of experience", :class => 'control-label' %>
     <div class="controls">
-      <%= f.number_field :skills_id, :class => 'number_field' %>
+      <%= f.text_field :level_exp, :class => 'text_field', :placeholder => 'e.g. Beginner, Intermediate ' %>
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :level_exp, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :level_exp, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :level_age_min, :class => 'control-label' %>
+    <%= f.label :level_age_min, "Minimum Age", :class => 'control-label' %>
     <div class="controls">
       <%= f.number_field :level_age_min, :class => 'number_field' %>
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :level_age_max, :class => 'control-label' %>
+    <%= f.label :level_age_max, "Maximum age", :class => 'control-label' %>
     <div class="controls">
       <%= f.number_field :level_age_max, :class => 'number_field' %>
     </div>
@@ -44,29 +44,17 @@
   <div class="control-group">
     <%= f.label :cost, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :cost, :class => 'text_field' %>
+      <%= f.text_field :cost, :class => 'text_field', :placeholder => 'e.g. £5 per session' %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :address, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :address, :class => 'text_field' %>
+      <%= f.text_area :address, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :lat, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :lat, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :lon, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :lon, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :into_work, :class => 'control-label' %>
+    <%= f.label :into_work, "Into work scheme", :class => 'control-label' %>
     <div class="controls">
       <%= f.check_box :into_work, :class => 'check_box' %>
     </div>
@@ -78,15 +66,9 @@
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :cost_min, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.number_field :cost_min, :class => 'number_field' %>
-    </div>
-  </div>
-  <div class="control-group">
     <%= f.label :skills, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :skills, :class => 'text_field' %>
+      <%= f.text_field :skills, :class => 'text_field', :placeholder => "Separated by a ',' e.g. HTML, CSS" %>
     </div>
   </div>
   <div class="control-group">
@@ -102,9 +84,9 @@
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :lo_type, :class => 'control-label' %>
+    <%= f.label :lo_type, "Opportunity Type(s)", :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :lo_type, :class => 'text_field' %>
+      <%= f.text_field :lo_type, :class => 'text_field', :placeholder => "Separated by a ',' e.g. course, online" %>
     </div>
   </div>
 

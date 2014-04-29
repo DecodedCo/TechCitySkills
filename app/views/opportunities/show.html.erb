@@ -4,34 +4,54 @@
 </div>
 
 <dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:image_url) %>:</strong></dt>
-  <dd><img src="<%= @opportunity.image_url %>"></dd>
+  <dt><strong>Logo:</strong></dt>
+  <dd><img src="<%= @opportunity.image_url %>">
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
-  <dd><%= @opportunity.name %></dd>
+  <dd><%= @opportunity.name %>&nbsp;</dd>
+  <% if @opportunity.site_url %>
   <dt><strong><%= model_class.human_attribute_name(:site_url) %>:</strong></dt>
-  <dd><%= @opportunity.site_url %></dd>
+  <dd><%= link_to @opportunity.site_url, @opportunity.site_url %>&nbsp;</dd>
+  <% end %>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
-  <dd><%= @opportunity.description %></dd>
+  <dd><%= @opportunity.description %>&nbsp;</dd>
+  <% if @opportunity.level_exp %>
   <dt><strong><%= model_class.human_attribute_name(:level_exp) %>:</strong></dt>
-  <dd><%= @opportunity.level_exp %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:level_age_min) %>:</strong></dt>
-  <dd><%= @opportunity.level_age_min %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:level_age_max) %>:</strong></dt>
-  <dd><%= @opportunity.level_age_max %></dd>
+  <dd><%= @opportunity.level_exp %>&nbsp;</dd>
+  <% end %>
+  <% if @opportunity.level_age_min != 0 %>
+  <dt><strong>Minimum Age:</strong></dt>
+  <dd><%= @opportunity.level_age_min %>&nbsp;</dd>
+  <% end %>
+  <% if @opportunity.level_age_max != 0 %>
+  <dt><strong>Maximum Age:</strong></dt>
+  <dd><%= @opportunity.level_age_max %>&nbsp;</dd>
+  <% end %>
+  <% if @opportunity.cost %>
   <dt><strong><%= model_class.human_attribute_name(:cost) %>:</strong></dt>
-  <dd><%= @opportunity.cost %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:into_work) %>:</strong></dt>
-  <dd><%= @opportunity.into_work %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:audience) %>:</strong></dt>
-  <dd><%= @opportunity.audience %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:cost_min) %>:</strong></dt>
-  <dd><%= @opportunity.cost_min %></dd>
+  <dd><%= @opportunity.cost == "0" ? "Free" : @opportunity.cost %>&nbsp;</dd>
+  <% end %>
+  <% if @opportunity.address %>
+  <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
+  <dd><%= @opportunity.address %>&nbsp;</dd>
+  <% end %>
+  <dt><strong>Into work scheme:</strong></dt>
+  <dd><%= @opportunity.into_work ? "Yes": "No" %>&nbsp;</dd>
+  <dt><strong>Girls only scheme:</strong></dt>
+  <dd><%= @opportunity.girls_only ? "Yes": "No" %>&nbsp;</dd>
+  <% if @opportunity.skills %>
   <dt><strong><%= model_class.human_attribute_name(:skills) %>:</strong></dt>
-  <dd><%= @opportunity.skills %></dd>
+  <dd><%= @opportunity.skills %>&nbsp;</dd>
+  <% end %>
+  <dt><strong><%= model_class.human_attribute_name(:audience) %>:</strong></dt>
+  <dd><%= @opportunity.audience || "All" %>&nbsp;</dd>
+  <% if @opportunity.employer_opp %>
   <dt><strong><%= model_class.human_attribute_name(:employer_opp) %>:</strong></dt>
-  <dd><%= @opportunity.employer_opp %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:lo_type) %>:</strong></dt>
-  <dd><%= @opportunity.lo_type %></dd>
+  <dd><%= @opportunity.employer_opp %>&nbsp;</dd>
+  <% end %>
+  <% if @opportunity.lo_type %>
+  <dt><strong>Opportunity type(s):</strong></dt>
+  <dd><%= @opportunity.lo_type %>&nbsp;</dd>
+  <% end %>
 </dl>
 
 <div class="form-actions">

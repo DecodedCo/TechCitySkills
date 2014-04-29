@@ -107,6 +107,16 @@ body {
         color:#ff0;
       }
 
+  
+  textarea {
+    height: 100px;
+    width: 300px;
+  }
+
+  input {
+    width: 300px;
+  }
+
 /* isotope */
   /**** Isotope Filtering ****/
 
