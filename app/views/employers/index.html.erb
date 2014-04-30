@@ -10,15 +10,21 @@ What can you do to help develop young talent who one day soon will work in your 
 <table class="table table-bordered table-striped">
 	<thead>
 		<th>Name</th>
-		<th>Opportunity</th>
+		<th>Type of opportunity</th>
+		<th>Description</th>
 	</thead>
 	<tbody>
 
 <% Opportunity.all.each do |opportunity| %>
 	<% if opportunity.employer_opp && opportunity.employer_opp != "n" %>
 	<tr>
-		<td><%= opportunity.name %></td>
-		<td><a href="<%= opportunity.employer_opp %>"><%= opportunity.employer_opp %></td>
+		<td><%= link_to opportunity.name, opportunity %></td>
+		<td><%= opportunity.lo_type %></td>
+		<td>
+			<%= opportunity.description %>
+			<br>
+			<%= link_to "Get involved", opportunity.employer_opp, :class => "btn btn-mini btn-success" %>
+		</td>
 	</tr>
 	<% end %>
 <% end %>
