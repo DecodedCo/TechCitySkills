@@ -64,7 +64,12 @@
       </div><!--/row-->
 
       <footer>
-        <p>&copy; Centre for London 2014 <%= link_to "Admin login", "/users/sign_in" %></p>
+        <p>&copy; Centre for London 2014 
+        <% if user_signed_in? %>
+        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+        <% else %>
+        <%= link_to "Admin login", "/users/sign_in" %></p>
+        <% end %>
       </footer>
 
     </div> <!-- /container -->
