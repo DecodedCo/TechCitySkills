@@ -59,6 +59,8 @@ module TechCitySkills
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.1'
 
+    config.action_dispatch.x_sendfile_header = nil # For Heroku
+
     config.assets.initialize_on_precompile = false
   end
 end
