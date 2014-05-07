@@ -1,32 +1,39 @@
 <%- model_class = Opportunity -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+<div class="row">
+  <div class="page-header span6">
+    <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  </div>
 </div>
-      <p>Welcome to the club of Tech City. If you’re interested in tech and you’re willing to work hard, you can be a part of it.
-      <br>
-      Tech companies are looking for people with technical, design and people skills. If you know what you want to learn but don’t know where to find it, you’re in the right place. Here you can search for all the different local programmes that teach you how to code, build software or understand electronics.
-      <br>
-      Search here by telling us your preferences, what you want to do, and who you want to be.
-      </p>
+<div class="row" id="opener">
+  <div class="span6">
+    <p class="lead">Welcome to the club of Tech City. If you’re interested in tech and you’re willing to work hard, you can be a part of it.</p>
+
+    <p>Tech companies are looking for people with technical, design and people skills. If you know what you want to learn but don’t know where to find it, you’re in the right place. Here you can search for all the different local programmes that teach you how to code, build software or understand electronics.</p>
+    <p>Search here by telling us your preferences, what you want to do, and who you want to be.
+    </p>
+  </div>
+</div>
 <div class="row opportunities">
-  <div class="span4 opportunities__filter">
-    <h3>Filters</h3>
-    <p><a href="#" data-filter="*">show all</a></p>
-    <p>Level</p>
-    <ul id="filters">
+  <div class="span2 opportunities__filter">
+
+
+    <!-- <p>Level</p> -->
+    <ul id="filters" class="nav nav-list bs-docs-sidenav">
       <li><a href="#" data-filter=".beginner">beginner</a></li>
       <li><a href="#" data-filter=".novice">novice</a></li>
       <li><a href="#" data-filter=".intermediate">intermediate</a></li>
       <li><a href="#" data-filter=".expert">expert</a></li>
     </ul>
-    <p>Skills</p>
-    <ul id="filters">
+    <!-- <p>Skills</p> -->
+    <ul id="filters" class="nav nav-list bs-docs-sidenav">
       <% @skills.each do |skill| %>
         <li><a href="#" data-filter=".<%= skill %>"><%= skill.tr("_", " ") %></a></li>
       <% end %>
     </ul>
+        <!-- <h3>Filters</h3> -->
+    <p><a href="#" data-filter="*">show all filters</a></p>
   </div>
-  <div class="span8 opportunities__list">
+  <div class="span10 opportunities__list">
     <ul>
       <% @opportunities.each do |opportunity| %>
         <% puts opportunity.level_exp %>

@@ -1,10 +1,15 @@
 <%- model_class = Opportunity -%>
- <p>Tech companies need people need people with technical, design and good people skills. Find opportunities in your area to learn different levels of coding, design, making and communicating.<br>
-      Add your programme - Offer an opportunity for young people to learn tech ? Promote it here and call out for support from tech professionals.
-      <br>
-      Commit your time - commit to mentor, teach and inspire young people and help develop the future tech workforce.
-      </p>
-<div class="page-header">
-  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human.titleize %></h1>
+<div class="row">
+  <div class="page-header span6">
+    <h1>Add your programme</h1>
+  </div>
 </div>
+<div class="row" id="opener">
+  <div class="span6">
+    <p class="lead">Offer an opportunity for young people to learn tech? Promote it here and call out for support from tech professionals.</p>
+    <p>Commit to mentor, teach and inspire young people and help develop the future tech workforce.</p>
+  </div>
+</div>
+
+
 <%= render :partial => 'form' %>
